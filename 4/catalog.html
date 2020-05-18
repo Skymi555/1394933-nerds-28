@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Каталог товаров</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=1234567890&lang=ru_RU" type="text/javascript">
+  </script>
+  <base href="https://htmlacademy-htmlcss.github.io/1394933-nerds-28/4/">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">
+      <img src="https://via.placeholder.com/150x100" alt="Логотип"><!--Нужно ли указывать размеры логотипа?  -->
+    </a>
+    <ul>
+      <li><a href=""> Студия</a></li>
+      <li><a href="">Клиенты</a></li>
+      <li><a href="catalog.html">Магазин</a></li>
+      <li><a href="">Контакты</a></li>
+    </ul>
+    <a href="">Корзина</a>
+  </nav>
+</header>
+<main>
+  <h1>Магазин готовых шаблонов</h1>
+
+  <div>
+  <p>Сортировать:</p>
+    <a href="">по цене</a>
+    <a href="">по типу</a>
+    <a href="">по названию</a><!--Стрелочки-->
+  </div>
+
+
+
+  <form action="#" method="get">
+    <fieldset>
+      <legend>Стоимость</legend>
+      <!--Ползунок-->
+      <label>от<input type="text" value="0"></label>
+      <label>до<input type="text" value="15000"></label>
+    </fieldset>
+    <fieldset>
+      <legend>Сетка</legend>
+      <label><input type="radio" name="adaptive">Адаптированная</label>
+      <label><input type="radio" name="fixed">Фиксированная</label>
+      <label><input type="radio" name="flex">Резиновая</label>
+    </fieldset>
+    <fieldset>
+      <legend>Особенности</legend>
+      <label><input type="checkbox" name="slider">Слайдер</label>
+      <label><input type="checkbox" name="benefits-block">Блок преимуществ</label>
+      <label><input type="checkbox" name="news">Новости</label>
+      <label><input type="checkbox" name="gallery">Галерея</label>
+      <label><input type="checkbox" name="basket">Корзина</label>
+    </fieldset>
+    <button type="submit" formaction="https://echo.htmlacademy.ru">Показать</button>
+  </form>
+  <h2>Товары</h2> <!--Будет скрытый заголовок-->
+  <ul>
+    <li>
+      <a href="">
+      <img src="https://via.placeholder.com/150x100" alt="Sedona">
+      </a>
+    </li>
+    <li>
+      <a href="">
+      <img src="https://via.placeholder.com/150x100" alt="Pink">
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <img src="https://via.placeholder.com/150x100" alt="Barbershop Borodinski">
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <img src="https://via.placeholder.com/150x100" alt="Mishka">
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <img src="https://via.placeholder.com/150x100" alt="A+">
+      </a>
+    </li>
+    <li>
+      <a href="">
+        <img src="https://via.placeholder.com/150x100" alt="Кваст">
+      </a>
+    </li>
+  </ul>
+
+  <form>
+    <button type="submit" formaction="#">1</button>
+    <button type="submit" formaction="#">2</button>
+    <button type="submit" formaction="#">3</button>
+    <button type="submit" formaction="#">Следующая</button>
+  </form>
+
+
+
+</main>
+
+
+<footer>
+
+  <div>Nёrds design studio</div>
+  <div>191186,Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</div>
+  <div>тел. +7(812)2757575</div>
+  <button type="submit" formaction="#">Напишите нам</button>
+
+  <!--<area shape="rect" coords="" href="rect.html">-->
+
+  <div id="map" style="width: 600px; height: 400px"></div>
+  <script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init(){
+      // Создание карты.
+      var myMap = new ymaps.Map("map", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [59.938635, 30.323118],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 15
+      });
+    }<!--Сделать еще метку на карте-->
+  </script>
+
+
+
+
+
+  <section>
+    <h2>Соцсети</h2><!-- будет скрытый заголовок-->
+    <p>Давайте дружить, это выгодно!</p>
+    <span>Скидка 10% для друзей из социальных сетей.</span>
+    <ul>
+      <li>
+        <a href="">Вконтакте</a>
+      </li>
+      <li>
+        <a href="">Фейсбук</a>
+      </li>
+      <li>
+        <a href="">Инстаграм</a>
+      </li>
+    </ul>
+  </section>
+</footer>
+</body>
+</html>
+
+
+
